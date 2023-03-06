@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import NewNote , {links as NewNoteLinks} from "~/components/notes/NewNote";
-
+import type { LinksFunction } from "@remix-run/node";
 
 export default function NotesPage() {
   return (
@@ -10,6 +10,6 @@ export default function NotesPage() {
   );
 }
 
-export function links() {
+export const links: LinksFunction = () => {
   return [...NewNoteLinks()];
 }
